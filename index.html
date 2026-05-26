@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="MainCrafts - Build smarter digital solutions with cutting-edge web design, app development, and scalable technology.">
+    <title>MainCrafts — Build Smarter Digital Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-container">
+            <a href="#" class="logo" id="logo"><i class="fas fa-rocket"></i> Main<strong>Crafts</strong></a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation"><span class="bar"></span><span
+                    class="bar"></span><span class="bar"></span></button>
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li class="has-dropdown">
+                        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown" id="services-dropdown">
+                            <li><a href="#"><i class="fas fa-paint-brush"></i> Web Design</a></li>
+                            <li><a href="#"><i class="fas fa-mobile-alt"></i> App Development</a></li>
+                            <li><a href="#"><i class="fas fa-search"></i> SEO Optimization</a></li>
+                            <li><a href="#"><i class="fas fa-cloud"></i> Cloud Solutions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-badge">🚀 Welcome to the Future</span>
+            <h1>Build Smarter with <span class="gradient-text">MainCrafts</span></h1>
+            <p class="hero-subtitle">We craft stunning digital experiences that propel your business forward. From
+                pixel-perfect design to scalable architecture — we've got you covered.</p>
+            <div class="hero-buttons">
+                <a href="#features" class="btn btn-primary" id="cta-get-started">Get Started <i
+                        class="fas fa-arrow-right"></i></a>
+                <a href="#contact" class="btn btn-outline" id="cta-learn-more"><i class="fas fa-play-circle"></i> Learn
+                    More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-number">500+</span><span class="stat-label">Projects
+                        Delivered</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-number">98%</span><span class="stat-label">Client
+                        Satisfaction</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-number">50+</span><span class="stat-label">Team Members</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Why Choose Us</span>
+                <h2>Powerful Features Built for <span class="gradient-text">Growth</span></h2>
+                <p class="section-subtitle">Everything you need to launch, grow, and scale your digital presence.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" id="feature-fast">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Lightning Fast</h3>
+                    <p>Blazing fast load times with optimized code. Your users won't wait — they'll be amazed.</p><a
+                        href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card" id="feature-responsive">
+                    <div class="feature-icon icon-purple"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Fully Responsive</h3>
+                    <p>Pixel-perfect on every screen. Desktop, tablet, or mobile — looks stunning everywhere.</p><a
+                        href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card" id="feature-scalable">
+                    <div class="feature-icon icon-green"><i class="fas fa-expand-arrows-alt"></i></div>
+                    <h3>Scalable</h3>
+                    <p>Built to grow with your business. Handles thousands of users without breaking a sweat.</p><a
+                        href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card" id="feature-secure">
+                    <div class="feature-icon icon-orange"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Secure & Reliable</h3>
+                    <p>Enterprise-grade security from day one. Your data stays safe, always encrypted.</p><a href="#"
+                        class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Ready to Build Something <span class="gradient-text">Amazing?</span></h2>
+                <p>Join hundreds of satisfied clients who transformed their digital presence with MainCrafts.</p>
+                <form class="cta-form" id="contact-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email address" id="email-input" required
+                            aria-label="Email address">
+                        <button type="submit" class="btn btn-primary" id="cta-apply">Apply Now <i
+                                class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+                <p class="cta-note"><i class="fas fa-lock"></i> No spam. We respect your privacy.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="#" class="logo"><i class="fas fa-rocket"></i>
+                        Main<strong>Crafts</strong></a>
+                    <p>Building smarter digital solutions for tomorrow's challenges.</p>
+                    <div class="social-links"><a href="#" id="social-fb"><i class="fab fa-facebook-f"></i></a><a
+                            href="#" id="social-tw"><i class="fab fa-twitter"></i></a><a href="#" id="social-li"><i
+                                class="fab fa-linkedin-in"></i></a><a href="#" id="social-gh"><i
+                                class="fab fa-github"></i></a></div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">App Development</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MainCrafts. All rights reserved.</p>
+                <div class="footer-bottom-links"><a href="#">Privacy Policy</a><span>|</span><a
+                        href="#">Terms</a><span>|</span><a href="#">Contact</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger'), navbar = document.getElementById('navbar'), navLinks = document.querySelectorAll('.nav-link'), header = document.getElementById('header');
+        hamburger.addEventListener('click', () => { hamburger.classList.toggle('active'); navbar.classList.toggle('active'); });
+        navLinks.forEach(l => l.addEventListener('click', () => { hamburger.classList.remove('active'); navbar.classList.remove('active'); }));
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); let c = ''; document.querySelectorAll('section').forEach(s => { if (scrollY >= s.offsetTop - 200) c = s.id; }); navLinks.forEach(l => { l.classList.remove('active'); if (l.getAttribute('href') === '#' + c) l.classList.add('active'); }); });
+        document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', function (e) { const t = document.querySelector(this.getAttribute('href')); if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); } }));
+        const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); } }), { threshold: 0.1 });
+        document.querySelectorAll('.feature-card,.section-header,.cta-box,.hero-content').forEach(el => { el.classList.add('reveal'); obs.observe(el); });
+        document.getElementById('contact-form').addEventListener('submit', e => { e.preventDefault(); const em = document.getElementById('email-input').value; if (em) { alert('Thank you! We will contact you at: ' + em); e.target.reset(); } });
+    </script>
+</body>
+
+</html>
