@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Get in touch with MainCrafts. Send us a message and we'll get back to you within 24 hours.">
+    <title>Contact Us — MainCrafts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ========== HEADER / NAVBAR ========== -->
+    <header id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="logo"><i class="fas fa-rocket"></i> Main<strong>Crafts</strong></a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== CONTACT HERO ========== -->
+    <section class="page-hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="hero-badge">📬 Let's Talk</span>
+                <h1>Get in <span class="gradient-text">Touch</span></h1>
+                <p class="hero-subtitle">Have a project in mind? We'd love to hear about it. Fill out the form below
+                    and we'll get back to you within 24 hours.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send Us a <span class="gradient-text">Message</span></h2>
+                    <p class="form-description">Fill out the form and our team will reach out to you shortly.</p>
+
+                    <form name="contactForm" id="contactForm" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label for="name">Your Name <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="name" name="name" placeholder="Enter your name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" placeholder="Enter your email">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <div class="input-wrapper textarea-wrapper">
+                                <i class="fas fa-comment-dots"></i>
+                                <textarea id="message" name="message" placeholder="Enter message" rows="5"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full" id="contact-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+
+                    <p class="form-note"><i class="fas fa-lock"></i> Your information is secure and will never be
+                        shared.</p>
+                </div>
+
+                <!-- Contact Info Cards -->
+                <div class="contact-info">
+                    <div class="info-card" id="info-email">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <h3>Email Us</h3>
+                        <p>hello@maincrafts.com</p>
+                        <a href="mailto:hello@maincrafts.com" class="info-link">Send Email <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="info-card" id="info-phone">
+                        <div class="info-icon icon-purple"><i class="fas fa-phone-alt"></i></div>
+                        <h3>Call Us</h3>
+                        <p>+1 (555) 123-4567</p>
+                        <a href="tel:+15551234567" class="info-link">Make a Call <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="info-card" id="info-location">
+                        <div class="info-icon icon-green"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3>Visit Us</h3>
+                        <p>123 Innovation Drive, San Francisco, CA 94102</p>
+                        <a href="#" class="info-link">Get Directions <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="info-card" id="info-hours">
+                        <div class="info-icon icon-orange"><i class="fas fa-clock"></i></div>
+                        <h3>Working Hours</h3>
+                        <p>Mon – Fri: 9 AM – 6 PM<br>Sat – Sun: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ SECTION ========== -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">FAQ</span>
+                <h2>Frequently Asked <span class="gradient-text">Questions</span></h2>
+                <p class="section-subtitle">Quick answers to the questions we get asked the most.</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item" id="faq-1">
+                    <div class="faq-question">
+                        <h3>How long does a typical project take?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most projects are completed within 4–8 weeks depending on complexity. We'll provide a
+                            detailed timeline during our initial consultation.</p>
+                    </div>
+                </div>
+                <div class="faq-item" id="faq-2">
+                    <div class="faq-question">
+                        <h3>Do you offer ongoing support?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer maintenance packages and ongoing support to ensure your project stays updated
+                            and runs smoothly.</p>
+                    </div>
+                </div>
+                <div class="faq-item" id="faq-3">
+                    <div class="faq-question">
+                        <h3>What technologies do you use?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We work with modern technologies including React, Next.js, Node.js, Python, AWS, and more —
+                            always choosing the best stack for your needs.</p>
+                    </div>
+                </div>
+                <div class="faq-item" id="faq-4">
+                    <div class="faq-question">
+                        <h3>Can I request a custom quote?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! Fill out the contact form above with your project details and we'll get back to
+                            you with a personalized quote within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><i class="fas fa-rocket"></i>
+                        Main<strong>Crafts</strong></a>
+                    <p>Building smarter digital solutions for tomorrow's challenges.</p>
+                    <div class="social-links">
+                        <a href="#" id="social-fb-contact" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" id="social-tw-contact" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" id="social-li-contact" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" id="social-gh-contact" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">App Development</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MainCrafts. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a><span>|</span>
+                    <a href="#">Terms</a><span>|</span>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
