@@ -202,6 +202,44 @@ img{max-width:100%;display:block}
 .footer-bottom-links a:hover{color:var(--primary)}
 .footer-bottom-links span{color:rgba(255,255,255,0.1)}
 
+/* SUBMISSIONS */
+.submissions-section{padding:80px 0 120px}
+.submissions-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;flex-wrap:wrap;gap:20px}
+.submissions-info h2{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:4px}
+.submissions-list{display:flex;flex-direction:column;gap:20px}
+.submission-card{background:var(--bg-card);border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius);padding:28px 32px;transition:var(--transition);position:relative;overflow:hidden;animation:fadeSlideIn 0.5s ease both}
+.submission-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:4px;background:var(--gradient-primary);opacity:0;transition:var(--transition)}
+.submission-card:hover{transform:translateY(-4px);border-color:rgba(79,172,254,0.15);box-shadow:var(--shadow-glow)}
+.submission-card:hover::before{opacity:1}
+.submission-number{font-family:var(--font-display);font-size:1.5rem;font-weight:800;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px}
+.submission-details{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:16px}
+.submission-field{display:flex;align-items:flex-start;gap:12px}
+.submission-field>i{width:36px;height:36px;min-width:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(79,172,254,0.1);color:var(--primary);font-size:0.85rem;margin-top:2px}
+.field-label{display:block;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:2px}
+.field-value{display:block;font-size:0.95rem;color:var(--text-primary);word-break:break-word}
+.submission-time{font-size:0.8rem;color:var(--text-muted);display:flex;align-items:center;gap:6px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.05)}
+.submission-time i{color:var(--primary);font-size:0.75rem}
+@keyframes fadeSlideIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* EMPTY STATE */
+.empty-state{text-align:center;padding:80px 24px;background:var(--bg-card);border-radius:var(--radius);border:1px dashed rgba(79,172,254,0.2)}
+.empty-icon{width:80px;height:80px;border-radius:50%;background:rgba(79,172,254,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:2rem;color:var(--primary)}
+.empty-state h3{font-family:var(--font-display);font-size:1.5rem;font-weight:700;margin-bottom:8px}
+.empty-state p{color:var(--text-secondary);margin-bottom:24px}
+
+/* BUTTON DANGER */
+.btn-danger{border-color:rgba(248,113,113,0.3);color:#f87171}
+.btn-danger:hover{background:rgba(248,113,113,0.1);border-color:#f87171;color:#f87171}
+
+/* TOAST NOTIFICATION */
+.toast-notification{position:fixed;top:24px;right:24px;z-index:10000;display:flex;align-items:center;gap:12px;padding:16px 24px;border-radius:var(--radius-sm);font-size:0.95rem;font-weight:500;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 8px 32px rgba(0,0,0,0.4);transform:translateX(120%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);max-width:420px}
+.toast-notification.toast-show{transform:translateX(0)}
+.toast-success{background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);color:#34d399}
+.toast-success i{color:#34d399;font-size:1.2rem}
+.toast-error{background:rgba(248,113,113,0.15);border:1px solid rgba(248,113,113,0.3);color:#f87171}
+.toast-error i{color:#f87171;font-size:1.2rem}
+.toast-notification span{color:var(--text-primary)}
+
 /* ANIMATIONS */
 .reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s ease,transform 0.8s ease}
 .reveal.revealed{opacity:1;transform:translateY(0)}
@@ -227,6 +265,10 @@ img{max-width:100%;display:block}
 .cta-box{padding:48px 24px}
 .story-highlights{flex-direction:column}
 .contact-form-wrapper{padding:32px 24px}
+.submissions-header{flex-direction:column;align-items:flex-start}
+.submission-details{grid-template-columns:1fr}
+.submission-card{padding:20px}
+.toast-notification{left:16px;right:16px;max-width:none}
 }
 
 /* RESPONSIVE MOBILE */
@@ -241,4 +283,5 @@ img{max-width:100%;display:block}
 .footer-grid{grid-template-columns:1fr}
 .hero-stats{flex-direction:column;gap:20px}
 .story-visual{grid-template-columns:1fr}
+.submission-field>i{display:none}
 }

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="View all contact form submissions saved locally. MainCrafts Submissions Dashboard.">
+    <title>Submissions — MainCrafts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ========== HEADER / NAVBAR ========== -->
+    <header id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="logo"><i class="fas fa-rocket"></i> Main<strong>Crafts</strong></a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="submissions.html" class="nav-link active">Submissions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== SUBMISSIONS HERO ========== -->
+    <section class="page-hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="hero-badge">📋 All Submissions</span>
+                <h1>Contact <span class="gradient-text">Submissions</span></h1>
+                <p class="hero-subtitle">All form submissions saved in your browser's LocalStorage are displayed below.
+                    Data persists across sessions until cleared.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SUBMISSIONS SECTION ========== -->
+    <section class="submissions-section">
+        <div class="container">
+            <div class="submissions-header">
+                <div class="submissions-info">
+                    <h2><span class="gradient-text"><span id="submissions-count">0</span></span> Total Submissions</h2>
+                    <p class="section-subtitle">Stored locally in your browser via LocalStorage</p>
+                </div>
+                <button class="btn btn-outline btn-danger" id="clear-submissions">
+                    <i class="fas fa-trash-alt"></i> Clear All
+                </button>
+            </div>
+
+            <div id="submissions-list" class="submissions-list">
+                <!-- Submissions will be dynamically rendered by script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA BANNER ========== -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Have Another <span class="gradient-text">Message?</span></h2>
+                <p>Head back to the contact page to submit another entry.</p>
+                <a href="contact.html" class="btn btn-primary" id="cta-submissions-contact">Go to Contact <i
+                        class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><i class="fas fa-rocket"></i>
+                        Main<strong>Crafts</strong></a>
+                    <p>Building smarter digital solutions for tomorrow's challenges.</p>
+                    <div class="social-links">
+                        <a href="#" id="social-fb-submissions" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" id="social-tw-submissions" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" id="social-li-submissions" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" id="social-gh-submissions" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="submissions.html">Submissions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">App Development</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MainCrafts. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a><span>|</span>
+                    <a href="#">Terms</a><span>|</span>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
