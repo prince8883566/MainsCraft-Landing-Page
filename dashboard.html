@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Task Manager Dashboard - Add, edit, delete, and search tasks with LocalStorage persistence.">
+    <title>Task Manager Dashboard — MainCrafts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ========== HEADER / NAVBAR ========== -->
+    <header id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="logo"><i class="fas fa-rocket"></i> Main<strong>Crafts</strong></a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="submissions.html" class="nav-link">Submissions</a></li>
+                    <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="page-hero-content">
+            <span class="hero-badge">📋 Task 4 — CRUD Dashboard</span>
+            <h1>Task Manager <span class="gradient-text">Dashboard</span></h1>
+            <p class="hero-subtitle">Add, edit, delete, and search tasks. All data is saved in LocalStorage so your
+                tasks persist even after refreshing the page.</p>
+        </div>
+    </section>
+
+    <!-- ========== DASHBOARD SECTION ========== -->
+    <section class="dashboard-section">
+        <div class="container">
+
+            <!-- Dashboard Stats Bar -->
+            <div class="dashboard-stats">
+                <div class="dash-stat" id="dash-stat-total">
+                    <i class="fas fa-tasks"></i>
+                    <div>
+                        <span class="dash-stat-number" id="totalCount">0</span>
+                        <span class="dash-stat-label">Total Tasks</span>
+                    </div>
+                </div>
+                <div class="dash-stat" id="dash-stat-completed">
+                    <i class="fas fa-check-circle" style="color:#34d399"></i>
+                    <div>
+                        <span class="dash-stat-number" id="completedCount">0</span>
+                        <span class="dash-stat-label">Completed</span>
+                    </div>
+                </div>
+                <div class="dash-stat" id="dash-stat-pending">
+                    <i class="fas fa-clock" style="color:#fb923c"></i>
+                    <div>
+                        <span class="dash-stat-number" id="pendingCount">0</span>
+                        <span class="dash-stat-label">Pending</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task Input Area -->
+            <div class="dashboard-input-box" id="dashboard-input-box">
+                <h2><i class="fas fa-plus-circle"></i> <span id="inputBoxTitle">Add New Task</span></h2>
+                <div class="task-input-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-pencil-alt"></i>
+                        <input type="text" id="taskInput" placeholder="Enter a task (e.g., Finish Assignment)"
+                            maxlength="150">
+                    </div>
+                    <button class="btn btn-primary" id="addTaskBtn" onclick="addTask()">
+                        <i class="fas fa-plus"></i> <span id="addBtnText">Add Task</span>
+                    </button>
+                    <button class="btn btn-outline" id="cancelEditBtn" onclick="cancelEdit()" style="display:none">
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search & Filter Controls -->
+            <div class="dashboard-controls" id="dashboard-controls">
+                <div class="search-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchBox" placeholder="Search tasks..." onkeyup="searchTasks()">
+                </div>
+                <div class="filter-wrapper">
+                    <i class="fas fa-filter"></i>
+                    <select id="filterSelect" onchange="filterTasks()">
+                        <option value="all">All Tasks</option>
+                        <option value="completed">Completed Only</option>
+                        <option value="pending">Pending Only</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Task List -->
+            <ul id="taskList" class="task-list"></ul>
+
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><i class="fas fa-rocket"></i>
+                        Main<strong>Crafts</strong></a>
+                    <p>Building smarter digital solutions for tomorrow's challenges.</p>
+                    <div class="social-links">
+                        <a href="#" id="social-fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" id="social-tw" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" id="social-li" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" id="social-gh" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="submissions.html">Submissions</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">App Development</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MainCrafts. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a><span>|</span>
+                    <a href="#">Terms</a><span>|</span>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
